@@ -130,6 +130,7 @@
         }
 
         const currentUserId = getOrCreateUserId();
+        console.log("Device ID:", currentUserId);
 
         const allowedDevices = [
         "TW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0Ni4wLjAuMCBTYWZhcmkvNTM3LjM2MTQ0MDkwMDMwTWFjSW50ZWxBbWVyaWNhL05ld19Zb3JrZW4tR0I=",
@@ -148,7 +149,6 @@
         throw new Error("Unauthorized device");
         }
 
-        console.log("Device ID:", currentUserId);
 
         // -------------------------
         // QR generation & popup
