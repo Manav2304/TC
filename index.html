@@ -107,6 +107,49 @@
     </div>
 
     <script>
+
+        function getDeviceId() {
+            return btoa(
+            navigator.userAgent +
+            screen.width +
+            screen.height +
+            screen.colorDepth +
+            navigator.platform +
+            Intl.DateTimeFormat().resolvedOptions().timeZone +
+            navigator.language
+        );
+        }
+
+        function getOrCreateUserId() {
+                    let userId = localStorage.getItem("userId");
+                    if (!userId) {
+            userId = getDeviceId();
+            localStorage.setItem("userId", userId);
+        }
+                    return userId;
+        }
+
+        const currentUserId = getOrCreateUserId();
+
+        const allowedDevices = [
+        "TW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0Ni4wLjAuMCBTYWZhcmkvNTM3LjM2MTQ0MDkwMDMwTWFjSW50ZWxBbWVyaWNhL05ld19Zb3JrZW4tR0I=",
+        "PASTE_DEVICE_ID_2"
+        ];
+
+        if (!allowedDevices.includes(currentUserId)) {
+        document.body.innerHTML = `
+            <h2 style="text-align:center; margin-top:50px;">
+            Access Denied ❌
+            </h2>
+            <p style="text-align:center;">
+            This device is not authorized.
+            </p>
+        `;
+        throw new Error("Unauthorized device");
+        }
+
+        console.log("Device ID:", currentUserId);
+
         // -------------------------
         // QR generation & popup
         // -------------------------
