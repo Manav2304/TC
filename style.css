@@ -6,7 +6,8 @@ body {
 
 .curved-background {
     width: 100%;
-    height: 35vh;
+    height: 34.5vh;
+    max-height: 960px;
     background-color: #1d86d7;
     border-bottom-left-radius: 3% 3%;
     border-bottom-right-radius: 3% 3%;
@@ -19,7 +20,7 @@ body {
 
 .header {
     width: 100%;
-    padding: 1.75vh 0 2vh 0;
+    padding: 3vh 0 3vh 0;
     color: white;
     font-size: 1.75vh;
     font-weight: 600;
@@ -29,18 +30,19 @@ body {
 
 .card {
     background: #fff;
-    width: 85vw;
-    height: 85vh;
+    width: 84vw;
+    height: 83.75vh;
     max-width: 400px;
-    border-radius: 20px;
-    padding: 4vh 1vh 1vh;
-    box-shadow: 0 5px 40px #00000090;
+    border-radius: 15px;
+    padding: 3.5vh 1vh 1vh;
+    box-shadow: 0 5px 25px #00000090;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /* pushes progress to bottom */
 }
+
 
 .qr {
     background-color: var(--first);
@@ -57,7 +59,7 @@ body {
 }
 
 .qr img {
-    width: 100%;
+    width: 97%;
     height: 100%;
     padding: 0.5vw;
     background: white;
@@ -65,7 +67,7 @@ body {
 
 .tap {
     color: #000;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .info {
@@ -73,7 +75,7 @@ body {
 }
 
 .interstate {
-    font-size: 4vh;
+    font-size: 3.5vh;
     font-weight: 800;
     color: #fc353e;
     letter-spacing: 0.5px;
@@ -114,7 +116,7 @@ body {
 }
 
 .zone .number {
-    font-size: 5.5vh;
+    font-size: 6.5vh;
     font-weight: 1000;
     line-height: 1;
     margin-bottom: 6px;
@@ -122,7 +124,7 @@ body {
 
 .zone .text {
     font-weight: 700;
-    font-size: 2.5vh;
+    font-size: 2.15vh;
 }
 
 /* Progress section pinned to bottom */
@@ -135,8 +137,8 @@ body {
 }
 
 .progress-bar {
-    width: 130%;
-    height: 8px;
+    width: 150%;
+    height: 4px;
     background: #eee;
     border-radius: 4px;
     overflow: hidden;
@@ -155,13 +157,13 @@ body {
 
 .expiry {
     margin-top: 12px;
-    font-size: 6vw;
-    font-weight: 600;
+    font-size: 5vw;
+    font-weight: 725;
 }
 
 .validator {
     color: #0a0a0a;
-    font-size: 3vw;
+    font-size: 2.75vw;
     text-decoration: underline;
     margin-top: 1.5vh;
 }
@@ -169,7 +171,7 @@ body {
 .color-strip {
     display: flex;
     justify-content: space-between;
-    width: 130%;
+    width: 150%;
     margin-left: 30px;
     margin-right: 30px;
     padding-bottom: 2vh;
@@ -196,7 +198,7 @@ body {
 
 .color-block {
     width: 34%;
-    height: 1.75vh;
+    height: 2vh;
 }
 
 .red {
@@ -257,6 +259,6 @@ body {
     color: red;
 }
 
-#qr-clicked{
+#qr-clicked {
     display: none;
 }
